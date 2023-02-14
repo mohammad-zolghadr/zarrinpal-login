@@ -14,7 +14,8 @@ function startTimer() {
     document.getElementById("btn-resend").innerText = getTime();
     if (t == 0) {
       clearInterval(x);
-      document.getElementById("btn-resend").innerText = "ارسال مجدد ";
+      document.getElementById("btn-resend").innerText =
+        "ارسال کد به صورت پیامک";
       document.getElementById("btn-resend").classList.remove("disabled");
     }
   }, 1000);

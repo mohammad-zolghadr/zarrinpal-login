@@ -8,91 +8,98 @@
   </head>
   <body>
     <main>
-      <img src="assets/image/zarinpall.jpg" />
-      <h1>دریافت کد بازیابی</h1>
-      <div class="card-body">
-        <p>کد بازیابی ارسالی به شماره 09120305173 را وارد کنید</p>
-        <form id="form">
-          <div class="formInputs">
-            <input
-              class="form-control"
-              type="text"
-              maxlength="1"
-              oninvalid="this.setCustomValidity('کد را به درستی وارد کنید')"
-              size="1"
-              min="0"
-              max="9"
-              pattern="[0-9]{1}"
-              onkeypress="return isNumberKey(event)"
-              required
-              autofocus
-            />
-            <input
-              class="form-control"
-              type="text"
-              maxlength="1"
-              size="1"
-              min="0"
-              max="9"
-              pattern="[0-9]{1}"
-              onkeypress="return isNumberKey(event)"
-              required
-            />
-            <input
-              class="form-control"
-              type="text"
-              maxlength="1"
-              size="1"
-              min="0"
-              max="9"
-              pattern="[0-9]{1}"
-              onkeypress="return isNumberKey(event)"
-              required
-            />
-            <input
-              class="form-control"
-              type="text"
-              maxlength="1"
-              size="1"
-              min="0"
-              max="9"
-              pattern="[0-9]{1}"
-              onkeypress="return isNumberKey(event)"
-              required
-            />
-            <input
-              class="form-control"
-              type="text"
-              maxlength="1"
-              size="1"
-              min="0"
-              max="9"
-              pattern="[0-9]{1}"
-              onkeypress="return isNumberKey(event)"
-              required
-            />
-            <input
-              class="form-control"
-              type="text"
-              maxlength="1"
-              size="1"
-              min="0"
-              max="9"
-              pattern="[0-9]{1}"
-              onkeypress="return isNumberKey(event)"
-              required
-            />
-          </div>
-          <div class="formBtns">
-            <button id="btn-verify" type="submit">ادامه</button>
-            <button id="btn-resend" onclick="startTimer()"></button>
-          </div>
-          <div class="existAccount">
-            <h5>حساب دارید؟</h5>
-            <a href="#">ورود به حساب</a>
-          </div>
-        </form>
+      <div class="contentBody">
+        <img src="./assets/image/logo.svg" />
+        <div class="cardBody">
+          <h2>تایید</h2>
+          <p>
+            رمز یکبار مصرف به شماره 09123456789 پیامک شد<a href="#"
+              >ویرایش شماره</a
+            >
+          </p>
+          <form id="form">
+            <div class="formInputs">
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                oninvalid="this.setCustomValidity('کد را به درستی وارد کنید')"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                onkeypress="return isNumberKey(event)"
+                required
+                autofocus
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                onkeypress="return isNumberKey(event)"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                onkeypress="return isNumberKey(event)"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                onkeypress="return isNumberKey(event)"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                onkeypress="return isNumberKey(event)"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                onkeypress="return isNumberKey(event)"
+                required
+              />
+            </div>
+            <div class="formBtns">
+              <span id="btn-resend" onclick="startTimer()"></span>
+              <button id="btn-verify" type="submit">تایید و ادامه</button>
+            </div>
+            <div class="existAccount">
+              <h5>حساب دارید؟</h5>
+              <a href="#">ورود به حساب</a>
+            </div>
+          </form>
+        </div>
       </div>
+      <img src="assets/image/banner.jpg" />
     </main>
 
     <script src="assets/js/custom.js"></script>
