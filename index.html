@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zarrin Pal</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="login-page">
+      <main>
+        <img src="assets/image/zarinpal-cover.png" />
+        <h1>کد بازیابی</h1>
+        <h5>حساب دارید؟ <a href="#">ورود به حساب</a></h5>
+        <div class="card-body">
+          <h2>کد بازیابی</h2>
+          <p>کد بازیابی ارسالی به شماره 09120305173 را وارد کنید</p>
+          <form id="form">
+            <input
+              class="form-control"
+              type="text"
+              maxlength="1"
+              oninvalid="this.setCustomValidity('کد را به درستی وارد کنید')"
+              size="1"
+              min="0"
+              max="9"
+              pattern="[0-9]{1}"
+              onkeypress="return isNumberKey(event)"
+              required
+              autofocus
+            />
+            <input
+              class="form-control"
+              type="text"
+              maxlength="1"
+              size="1"
+              min="0"
+              max="9"
+              pattern="[0-9]{1}"
+              onkeypress="return isNumberKey(event)"
+              required
+            />
+            <input
+              class="form-control"
+              type="text"
+              maxlength="1"
+              size="1"
+              min="0"
+              max="9"
+              pattern="[0-9]{1}"
+              onkeypress="return isNumberKey(event)"
+              required
+            />
+            <input
+              class="form-control"
+              type="text"
+              maxlength="1"
+              size="1"
+              min="0"
+              max="9"
+              pattern="[0-9]{1}"
+              onkeypress="return isNumberKey(event)"
+              required
+            />
+            <input
+              class="form-control"
+              type="text"
+              maxlength="1"
+              size="1"
+              min="0"
+              max="9"
+              pattern="[0-9]{1}"
+              onkeypress="return isNumberKey(event)"
+              required
+            />
+            <input
+              class="form-control"
+              type="text"
+              maxlength="1"
+              size="1"
+              min="0"
+              max="9"
+              pattern="[0-9]{1}"
+              onkeypress="return isNumberKey(event)"
+              required
+            />
+            <div>
+              <button id="btn-verify" type="submit">ادامه</button>
+              <button id="btn-resend" onclick="startTimer()"></button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/count-down.js"></script>
+    <script>
+      var btnVerify = document.getElementById("btn-verify");
+      btnVerify.disabled = true;
+      var container = document.getElementsByClassName("form-wrap")[0];
+      container.onkeyup = function (e) {
+        var target = e.srcElement;
+        var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+        var myLength = target.value.length;
+        console.log(e);
+        if (e.keyCode == 8) {
+          target.previousElementSibling.select().focus();
+        } else {
+          if (target.value !== "" && e.keyCode >= 96 && e.keyCode <= 105) {
+            if (myLength >= maxLength) {
+              var next = target;
+              while ((next = next.nextElementSibling)) {
+                if (next == null) break;
+                if (next.tagName.toLowerCase() == "input") {
+                  next.select().focus();
+                  break;
+                }
+              }
+            }
+            btnVerify.disabled = false;
+          } else {
+            target.value = "";
+            btnVerify.disabled = true;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
