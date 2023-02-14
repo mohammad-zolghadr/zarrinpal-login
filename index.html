@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,64 +28,58 @@
                 min="0"
                 max="9"
                 pattern="[0-9]{1}"
-                onkeypress="return isNumberKey(event)"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
+                required
+              />
+              <input
+                class="form-control"
+                type="text"
+                maxlength="1"
+                size="1"
+                min="0"
+                max="9"
+                pattern="[0-9]{1}"
                 required
                 autofocus
-              />
-              <input
-                class="form-control"
-                type="text"
-                maxlength="1"
-                size="1"
-                min="0"
-                max="9"
-                pattern="[0-9]{1}"
-                onkeypress="return isNumberKey(event)"
-                required
-              />
-              <input
-                class="form-control"
-                type="text"
-                maxlength="1"
-                size="1"
-                min="0"
-                max="9"
-                pattern="[0-9]{1}"
-                onkeypress="return isNumberKey(event)"
-                required
-              />
-              <input
-                class="form-control"
-                type="text"
-                maxlength="1"
-                size="1"
-                min="0"
-                max="9"
-                pattern="[0-9]{1}"
-                onkeypress="return isNumberKey(event)"
-                required
-              />
-              <input
-                class="form-control"
-                type="text"
-                maxlength="1"
-                size="1"
-                min="0"
-                max="9"
-                pattern="[0-9]{1}"
-                onkeypress="return isNumberKey(event)"
-                required
-              />
-              <input
-                class="form-control"
-                type="text"
-                maxlength="1"
-                size="1"
-                min="0"
-                max="9"
-                pattern="[0-9]{1}"
-                onkeypress="return isNumberKey(event)"
-                required
               />
             </div>
             <div class="formBtns">
@@ -102,38 +96,6 @@
       <img src="assets/image/banner.jpg" />
     </main>
 
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/count-down.js"></script>
-    <script>
-      var btnVerify = document.getElementById("btn-verify");
-      btnVerify.disabled = true;
-      var container = document.getElementsByClassName("form-wrap")[0];
-      container.onkeyup = function (e) {
-        var target = e.srcElement;
-        var maxLength = parseInt(target.attributes["maxlength"].value, 10);
-        var myLength = target.value.length;
-        console.log(e);
-        if (e.keyCode == 8) {
-          target.previousElementSibling.select().focus();
-        } else {
-          if (target.value !== "" && e.keyCode >= 96 && e.keyCode <= 105) {
-            if (myLength >= maxLength) {
-              var next = target;
-              while ((next = next.nextElementSibling)) {
-                if (next == null) break;
-                if (next.tagName.toLowerCase() == "input") {
-                  next.select().focus();
-                  break;
-                }
-              }
-            }
-            btnVerify.disabled = false;
-          } else {
-            target.value = "";
-            btnVerify.disabled = true;
-          }
-        }
-      };
-    </script>
+    <script src="./app.js"></script>
   </body>
 </html>
