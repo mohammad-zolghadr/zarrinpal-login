@@ -7,15 +7,13 @@
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="login-page">
-      <main>
-        <img src="assets/image/zarinpal-cover.png" />
-        <h1>کد بازیابی</h1>
-        <h5>حساب دارید؟ <a href="#">ورود به حساب</a></h5>
-        <div class="card-body">
-          <h2>کد بازیابی</h2>
-          <p>کد بازیابی ارسالی به شماره 09120305173 را وارد کنید</p>
-          <form id="form">
+    <main>
+      <img src="assets/image/zarinpall.jpg" />
+      <h1>دریافت کد بازیابی</h1>
+      <div class="card-body">
+        <p>کد بازیابی ارسالی به شماره 09120305173 را وارد کنید</p>
+        <form id="form">
+          <div class="formInputs">
             <input
               class="form-control"
               type="text"
@@ -84,14 +82,18 @@
               onkeypress="return isNumberKey(event)"
               required
             />
-            <div>
-              <button id="btn-verify" type="submit">ادامه</button>
-              <button id="btn-resend" onclick="startTimer()"></button>
-            </div>
-          </form>
-        </div>
-      </main>
-    </div>
+          </div>
+          <div class="formBtns">
+            <button id="btn-verify" type="submit">ادامه</button>
+            <button id="btn-resend" onclick="startTimer()"></button>
+          </div>
+          <div class="existAccount">
+            <h5>حساب دارید؟</h5>
+            <a href="#">ورود به حساب</a>
+          </div>
+        </form>
+      </div>
+    </main>
 
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/count-down.js"></script>

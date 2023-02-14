@@ -22,10 +22,10 @@ function startTimer() {
 function getTime() {
   m = Math.floor(t / 60000);
   s = (t % 60000) / 1000;
-  if (m < 10) m_text = " 0 " + m;
+  if (m < 10) m_text = m + " 0 ";
   else m_text = m;
-  if (s < 10) s_text = " 0 " + s;
+  if (s < 10) s_text = s + " 0 ";
   else s_text = s;
 
-  return m_text + " : " + s_text;
+  return s_text + " : " + m_text;
 }
