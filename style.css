@@ -135,8 +135,7 @@ input:focus {
   cursor: pointer;
 }
 .formBtns span {
-  font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   min-width: 50px;
   color: var(--link-color);
   cursor: pointer;
@@ -179,6 +178,29 @@ a {
 }
 .disabled:hover {
   opacity: 1 !important;
+}
+
+.formBtns > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+progress {
+  height: 5px;
+  width: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: var(--primary-color);
+}
+progress[value]::-webkit-progress-value {
+  background-color: #e6e6e6;
+}
+progress[value]::-moz-progress-bar {
+  background-color: #e6e6e6;
 }
 
 @media (min-width: 600px) {

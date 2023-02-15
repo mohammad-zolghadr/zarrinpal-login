@@ -23,6 +23,7 @@ container.onkeyup = (e) => {
 };
 
 // ========================= Countdown Timer
+const timeProgress = document.querySelector("#timeProgress");
 let t = 0,
   m,
   s;
@@ -30,15 +31,18 @@ const startTimer = () => {
   if (t != 0) return;
   t = 120000;
   const resendField = document.querySelector("#resendField");
-  resendField.innerText = getTime();
+  resendField.innerText = `${getTime()}  تا ارسال مجدد کد `;
   resendField.classList.add("disabled");
+  timeProgress.max = t / 1000;
   var x = setInterval(() => {
     t -= 1000;
-    resendField.innerText = getTime();
+    timeProgress.value = t / 1000;
+    resendField.innerText = `${getTime()}  تا ارسال مجدد کد `;
     if (t == 0) {
       clearInterval(x);
       resendField.innerText = "ارسال کد به صورت پیامک";
       resendField.classList.remove("disabled");
+      timeProgress.style.display = "none";
     }
   }, 1000);
 };
