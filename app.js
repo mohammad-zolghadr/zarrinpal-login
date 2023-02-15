@@ -1,31 +1,24 @@
 // ========================= Auto Focus
-let btnVerify = document.querySelector("#btn-verify");
-btnVerify.disabled = true;
 let container = document.querySelectorAll(".formInputs")[0];
 container.onkeyup = (e) => {
   const target = e.srcElement;
-  const maxLength = parseInt(target.attributes["maxlength"].value);
-  const myLength = target.value.length;
+  const maxLength = 1;
+  const currentLength = target.value.length;
   if (e.keyCode == 8) {
-    // Delete a number
     target.nextElementSibling.select().focus();
   } else {
     if (target.value !== "" && e.keyCode >= 96 && e.keyCode <= 105) {
-      if (myLength >= maxLength) {
-        let next = target;
-        while ((next = next.previousElementSibling)) {
-          if (next == null) break;
-          if (next.tagName.toLowerCase() == "input") {
-            next.select().focus();
+      if (currentLength >= maxLength) {
+        let nextInput = target;
+        while ((nextInput = nextInput.previousElementSibling)) {
+          if (nextInput == null) break;
+          if (nextInput.tagName.toLowerCase() == "input") {
+            nextInput.select().focus();
             break;
           }
         }
       }
-      btnVerify.disabled = false;
-    } else {
-      target.value = "";
-      btnVerify.disabled = true;
-    }
+    } else target.value = "";
   }
 };
 
