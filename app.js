@@ -52,4 +52,19 @@ const getTime = () => {
   return `${s.padStart(2, "0")}  :  ${m.padStart(2, "0")}`;
 };
 
-startTimer();
+// ========================= Show and Hide Forms Handle
+const cardSmsPasswordBody = document.querySelector(".cardSmsPasswordBody");
+const cardGetNumberOrEmailBody = document.querySelector(
+  ".cardGetNumberOrEmailBody"
+);
+const NumberOrEmailForm = document.querySelector("#NumberOrEmailForm");
+const verifingNumber = document.querySelector(".verifingNumber");
+
+cardSmsPasswordBody.style.display = "none";
+NumberOrEmailForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  startTimer();
+  verifingNumber.innerText = e.target.firstElementChild.value;
+  cardGetNumberOrEmailBody.style.display = "none";
+  cardSmsPasswordBody.style.display = "flex";
+});

@@ -10,10 +10,29 @@
     <main>
       <div class="contentBody">
         <img src="./assets/image/logo.svg" />
-        <div class="cardBody">
+        <div class="cardGetNumberOrEmailBody">
+          <h2>ورود به زرین پال</h2>
+          <p>
+            برای استفاده از خدمات زرین‌پال، وارد حساب کاربری خود شوید.در صورت
+            نداشتن حساب کاربری <a href="#">ثبت‌‌نام</a> کنید
+          </p>
+          <form id="NumberOrEmailForm">
+            <input
+              class="inputNumberOrEmail"
+              placeholder="شماره تلفن یا ایمیل"
+              type="text"
+              required
+            />
+            <div class="formBtns">
+              <button id="btnVerifyNumber" type="submit">تایید و ادامه</button>
+            </div>
+          </form>
+        </div>
+        <div class="cardSmsPasswordBody">
           <h2>تایید</h2>
           <p>
-            رمز یکبار مصرف به شماره 09123456789 پیامک شد<a href="#"
+            رمز یکبار مصرف به شماره
+            <span class="verifingNumber">09123456789</span> پیامک شد<a href="#"
               >ویرایش شماره</a
             >
           </p>
@@ -35,7 +54,7 @@
             <div class="formBtns">
               <div>
                 <span id="resendField"></span>
-                <progress id="timeProgress" value="100" max="100"></progress>
+                <progress id="timeProgress" value="120" max="120"></progress>
               </div>
               <button id="btn-verify" type="submit">تایید و ادامه</button>
             </div>

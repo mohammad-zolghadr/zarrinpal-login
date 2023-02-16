@@ -75,11 +75,25 @@ img {
   flex-direction: column;
 }
 
-.cardBody {
+.cardSmsPasswordBody,
+.cardGetNumberOrEmailBody {
   margin-top: 70px;
   height: 70%;
   display: flex;
   flex-direction: column;
+}
+
+.cardGetNumberOrEmailBody {
+  gap: 10px;
+}
+
+.inputNumberOrEmail {
+  width: 100%;
+  text-align: start;
+}
+
+#btnVerifyNumber {
+  margin-right: auto;
 }
 
 .contentBody img {
