@@ -157,7 +157,8 @@ input:focus {
 
 a:hover,
 .formBtns button:hover,
-.formBtns span:hover {
+.formBtns span:hover,
+.btnEditNumber:hover {
   opacity: 0.5;
 }
 
@@ -178,11 +179,15 @@ h5 {
   font-size: 0.8rem;
 }
 
-a {
+a,
+.btnEditNumber {
+  background-color: transparent;
   color: var(--link-color);
+  font-family: "Yekan Bakh";
   font-weight: normal;
   font-size: 0.7rem;
   margin: 5px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
